@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormProductos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div>
+                <h2>Ingresa tus datos:</h2>
+
+                <div class="form-group">
+                    <label for="title">Name</label>
+                    <input type="text" name="title" class="form-control" id="nameForm">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" name="price" class="form-control" id="priceForm">
+                </div>
+
+                <div class="form-group">
+                    <label for="thumbnail">Img</label>
+                    <input type="text" name="thumbnail" class="form-control" id="imgForm">
+                </div>
+
+                <button id="sendMessage" class="btn btn-primary">Enviar</button>
+
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Photo</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyProducts">
+
+                </tbody>
+            </table>
+
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./formProductos.js"></script>
+</body>
+
+</html>
